@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji&family=Space+Grotesk:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #f8cb2e;
+    --over-lay: rgba(0, 0, 0, 0.1);
+    --normal: 1.2em;
+    --medium: 1.4em;
+    --large: 1.6em;
+    --ex-large: 2.5em;
+    --text: #000;
+}
+body{
+    box-sizing: border-box;
+    background: var(--main-color);
+    color: var(--text);
+    position: relative;
+    text-align: center;
+}
+
+/* --------
+ANIMATION
+--------- */
+
+
+@keyframes ghost{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5%);
+    }
+}
+
+@keyframes shadow{
+    0%, 100%{
+        transform: scale(.8);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+
+/* -----------
+ANIMATION ENDS 
+------------- */
+
+
+a{
+    text-decoration: none;
+    color: #f84c2e;
+}
+img{
+    width: 100%;
+    object-fit: contain;
+    animation: ghost 2s infinite alternate;
+}
+.wrapper{
+    /* width: 100vw; */
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+label{
+    font-size: var(--large);
+    font-weight: 500;
+    font-family: 'Skranji', cursive;
+}
+header{
+    width: 30em;
+    padding: 1em;
+    text-align: center;
+}
+p{
+    font-family: 'Space Grotesk', sans-serif;
+}
+h1{
+    padding-top: 1em;
+    font-family: 'Skranji', cursive;
+}
+header h1{
+    font-size: 2em;
+}
+header p{
+    font-size: 1.3em;
+    padding: 1em 0;
+}
+.img{
+    width: 25em;
+    position: relative;
+    text-align: center;
+
+}
+.shadow{
+    width: 12em;
+    height: 1em;
+    margin: 0 auto;
+    background: var(--over-lay);
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: shadow 2s infinite alternate;
+}
+.social-links{
+    padding: 1em 0;
+}
+.social-links i{
+    font-size: var(--normal);
+    padding:  0 .5em;
+    cursor:pointer;
+}
+.social-links a{
+    display: inline-block;
+}
+.social-links p{
+    font-size: var(--normal);
+    padding-top: .5em;
+}
